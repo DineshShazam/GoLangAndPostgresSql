@@ -31,6 +31,9 @@ func (logwritter) Write(bs []byte) (int, error) {
 }
 
 func main() {
+	// Write(p []byte) (n int, err error)
+	// Read(p []byte) (n int, err error)
+	// func Copy(dst Writer, src Reader) (written int64, err error)
 	response := GetHtml()
 	lw := logwritter{}
 	io.Copy(lw, response)
